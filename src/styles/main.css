@@ -47,7 +47,7 @@
 .info-wrapper .image-container .view-on-mal {
   color: white;
   font-size: 0.8rem;
-  font-family: 'KozGoPro Light';
+  font-family: 'Lato';
   letter-spacing: 1px;
   position: absolute;
   top: 50%;
@@ -121,6 +121,7 @@
 }
 
 .info-wrapper .info-container .synopsis-container .view-on-mal-sml {
+  font-family: 'Lato';
   display: none;
 }
 

@@ -1,0 +1,466 @@
+.info-wrapper {
+  height: 600px;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: -50px;
+  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.5);
+  background-color: white;
+  position: relative;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  grid-template-rows: 100%;
+  border-radius: 20px;
+}
+
+.info-wrapper:after {
+  content: '';
+  width: 100px;
+  height: 100%;
+  border: 5px solid transparent;
+  border-radius: 20px;
+  border-right-color: #85d3ff;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.info-wrapper .image-container {
+  height: 100%;
+  width: 380px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  position: relative;
+  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.5);
+}
+
+.info-wrapper .image-container .anime-image {
+  height: 100%;
+  width: 100%;
+  background-image: url("../img/malbg.jpg");
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  transition: 0.4s;
+}
+
+.info-wrapper .image-container .view-on-mal {
+  color: white;
+  font-size: 0.8rem;
+  font-family: 'KozGoPro Light';
+  letter-spacing: 1px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.info-wrapper .image-container:hover {
+  cursor: pointer;
+}
+
+.info-wrapper .image-container:hover > .anime-image {
+  filter: brightness(0.4);
+}
+
+.info-wrapper .image-container:hover > .view-on-mal {
+  opacity: 1;
+}
+
+.info-wrapper .info-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 65% 35%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.info-wrapper .info-container .synopsis-container {
+  color: #5b6076;
+  height: 100%;
+  background-color: white;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100px auto;
+  border-top-right-radius: 20px;
+}
+
+.info-wrapper .info-container .synopsis-container .synopsis-header {
+  padding: 80px 0;
+  width: 80%;
+  margin-left: 10%;
+  font-size: 2.5rem;
+  font-family: 'KozGoPro Med';
+  letter-spacing: 1px;
+}
+
+.info-wrapper .info-container .synopsis-container .synopsis-text {
+  padding: 50px 0;
+  margin-top: 40px;
+  font-family: 'KozGoPro Light';
+  font-size: 0.8rem;
+  width: 80%;
+  margin-left: 10%;
+}
+
+@media (max-width: 1290px) {
+  .info-wrapper .info-container .synopsis-container .synopsis-header {
+    text-align: center;
+    font-size: 2rem;
+    padding: 40px 0;
+  }
+  .info-wrapper .info-container .synopsis-container .synopsis-text {
+    padding: 20px 0;
+    margin-top: 0;
+  }
+}
+
+.info-wrapper .info-container .synopsis-container .view-on-mal-sml {
+  display: none;
+}
+
+.info-wrapper .info-container .stats-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto 200px;
+  grid-template-rows: 100%;
+  background-color: #fbfcfd;
+  border-bottom-right-radius: 20px;
+}
+
+.info-wrapper .info-container .stats-container .small-stats-flex {
+  display: flex;
+  flex-wrap: wrap;
+  height: 120px;
+  margin: auto 10px auto 60px;
+}
+
+.info-wrapper .info-container .stats-container .small-stats-flex .stats-bubble {
+  color: #355f5b;
+  background-color: white;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 40px;
+  padding: 0 30px;
+  font-size: 0.8rem;
+  height: 40px;
+  line-height: 40px;
+  margin: 5px;
+  transition: 0.4s;
+  user-select: none;
+}
+
+.info-wrapper .info-container .stats-container .small-stats-flex .stats-bubble:hover {
+  box-shadow: 1px 1px 12px 1px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 1290px) {
+  .info-wrapper .info-container .stats-container .small-stats-flex {
+    height: 100px;
+  }
+  .info-wrapper .info-container .stats-container .small-stats-flex .stats-bubble {
+    font-size: 0.7rem;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 25px;
+  }
+}
+
+@media (max-width: 1110px) {
+  .info-wrapper .info-container .stats-container .small-stats-flex .stats-bubble {
+    font-size: 0.8rem;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 45px;
+    flex: 1;
+  }
+  .info-wrapper .info-container .stats-container .small-stats-flex .stats-genre, .info-wrapper .info-container .stats-container .small-stats-flex .stats-aired {
+    display: none;
+  }
+}
+
+.info-wrapper .info-container .stats-container .studio-logo {
+  border-radius: 50%;
+  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.2);
+  width: 120px;
+  height: 120px;
+  background: white url("../img/whitefox.png");
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  justify-self: center;
+  margin: auto 0;
+  transition: 0.4s;
+}
+
+.info-wrapper .info-container .stats-container .studio-logo:hover {
+  box-shadow: 1px 1px 12px 1px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .info-wrapper {
+    width: 400px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.5);
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    border-radius: 20px;
+  }
+  .info-wrapper:after {
+    display: none;
+  }
+  .info-wrapper .image-container {
+    width: 100%;
+    border-radius: 20px;
+    position: absolute;
+    z-index: -1;
+  }
+  .info-wrapper .image-container .anime-image {
+    border-radius: 15px;
+    filter: brightness(0.6);
+  }
+  .info-wrapper .image-container .view-on-mal {
+    display: none;
+  }
+  .info-wrapper .info-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 360px 240px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .info-wrapper .info-container .synopsis-container {
+    color: white;
+    background-color: transparent;
+  }
+  .info-wrapper .info-container .synopsis-container .synopsis-header {
+    padding: 30px 0;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 20px;
+    font-size: 2rem;
+    font-family: 'KozGoPro Med';
+    letter-spacing: 1px;
+  }
+  .info-wrapper .info-container .synopsis-container .synopsis-text {
+    padding: 0 20px;
+    margin-top: 10px;
+    font-family: 'KozGoPro Light';
+    font-size: 0.7rem;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+  }
+  .info-wrapper .info-container .synopsis-container .view-on-mal-sml {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 0.8rem;
+    text-decoration: none;
+  }
+  .info-wrapper .info-container .stats-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto 200px;
+    grid-template-rows: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-bottom-right-radius: 20px;
+  }
+  .info-wrapper .info-container .stats-container .small-stats-flex {
+    display: flex;
+    flex-wrap: wrap;
+    height: 120px;
+    margin: 50% 10px 0 60px;
+    transform: translateY(-50%);
+  }
+  .info-wrapper .info-container .stats-container .small-stats-flex .stats-bubble {
+    color: #355f5b;
+    background-color: white;
+    box-shadow: 1px 1px 10px 1px black;
+    border-radius: 40px;
+    padding: 0 30px;
+    font-size: 0.8rem;
+    height: 40px;
+    line-height: 40px;
+    margin: 5px;
+    transition: 0.4s;
+    user-select: none;
+    text-align: center;
+    flex: 1;
+  }
+  .info-wrapper .info-container .stats-container .small-stats-flex .stats-bubble:hover {
+    box-shadow: 1px 1px 12px 1px rgba(0, 0, 0, 0.4);
+  }
+  .info-wrapper .info-container .stats-container .small-stats-flex .stats-aired {
+    display: block;
+  }
+  .info-wrapper .info-container .stats-container .studio-logo {
+    border-radius: 50%;
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.2);
+    width: 120px;
+    height: 120px;
+    background: white url("../img/whitefox.png");
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-self: center;
+    margin: auto 0;
+    transition: 0.4s;
+  }
+  .info-wrapper .info-container .stats-container .studio-logo:hover {
+    box-shadow: 1px 1px 12px 1px #85d3ff;
+    cursor: pointer;
+  }
+}
+
+.cds-wrapper {
+  height: 450px;
+  width: 900px;
+  background-color: white;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100%;
+  position: relative;
+  margin: 25px auto;
+}
+
+.cds-wrapper .side-decor {
+  position: absolute;
+  width: 100px;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: orange;
+  z-index: -1;
+}
+
+.cds-wrapper .ugoku-ugoku {
+  background-image: url("../img/ugoku.jpg");
+}
+
+.cds-wrapper .more-one-night {
+  background-image: url("../img/moreonenight.jpg");
+}
+
+.cds-wrapper .cd-image {
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: 400px;
+  margin: auto 0;
+  justify-self: center;
+}
+
+.cds-wrapper .cd-image .cd-text {
+  opacity: 0;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.cds-wrapper .cd-image .cd-text .cd-title {
+  font-size: 2rem;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: white;
+}
+
+body {
+  background-color: red;
+}
+
+.home-parallax-container {
+  height: 100vh;
+}
+
+.home-parallax-container .home-parallax {
+  height: 100vh;
+}
+
+.home-parallax-container .home-parallax #home-parallax-img {
+  background-image: url("../img/bg1.jpg");
+}
+
+.parallax-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: brightness(0.7);
+  z-index: -1;
+}
+
+.large-title {
+  color: white;
+  font-size: 6rem;
+  position: absolute;
+  text-shadow: 1px 1px 20px black;
+  font-family: 'KozGoPro Heavy';
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 60%;
+}
+
+.shousai-button {
+  background-color: white;
+  border-radius: 25px;
+  color: #355f5b;
+  border: none;
+  font-family: 'KozGoPro Reg';
+  padding: 14px 40px;
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.7);
+  transition: 0.5s;
+}
+
+.shousai-button:hover {
+  cursor: pointer;
+  background-color: #b3b3b3;
+}
+
+@media (max-width: 1050px) {
+  .large-title {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .large-title {
+    font-size: 3rem;
+    line-height: 110%;
+    width: 4rem;
+    bottom: 40%;
+  }
+  .shousai-button {
+    padding: 10px 30px;
+    bottom: 20%;
+  }
+}
+
+.forest-parallax-container {
+  margin-top: -100px;
+}
+
+#forest-parallax-img {
+  background-image: url("../img/bg2.jpg");
+}
+/*# sourceMappingURL=main.css.map */

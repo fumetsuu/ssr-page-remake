@@ -17,7 +17,7 @@ body
         height: 100vh
         #home-parallax-img
             background-image: url('../img/bg1.jpg')
-            
+   
 .parallax-image, .no-parallax-image
     width: 100%
     height: 100%
@@ -34,7 +34,7 @@ body
     font-size: 6rem
     position: absolute
     text-shadow: 1px 1px 20px black
-    font-family: 'KozGoPro Heavy'
+    font-family: 'mplusblack'
     text-align: center
     left: 50%
     transform: translateX(-50%)
@@ -45,8 +45,8 @@ body
     border-radius: 25px
     color: $darkteal
     border: none
-    font-family: 'KozGoPro Reg'
-    padding: 14px 40px
+    font-family: 'mpluslight'
+    padding: 15px 40px
     left: 50%
     bottom: 50%
     transform: translateX(-50%)
@@ -56,6 +56,29 @@ body
     &:hover
         cursor: pointer
         background-color: darken(white, 30%)
+
+.long-scroll
+    position: absolute
+    right: 20px
+    bottom: 20px
+    height: 50px
+    width: 50px
+    border-radius: 50%
+    background-color: white
+    &:hover
+        background-color: darken($slightgrey, 10%)
+        cursor: pointer
+    i
+        background: -webkit-linear-gradient($blue, darken($blue, 30%));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+button
+    outline: none
+    border: none
+
+a
+    text-decoration: none
 
 @media (max-width: 1050px)
     .large-title
@@ -86,7 +109,13 @@ body
     to
         opacity: 1
         transform: 
-        
+@keyframes fadeUpNoX
+    from
+        opacity: 0
+        transform: translateY(20%)
+    to
+        opacity: 1
+        transform: 
 @media (max-width: 992px)
     @keyframes fadeUp
         from
@@ -98,3 +127,6 @@ body
 
 .fadeUp
     animation: fadeUp 0.5s
+
+.fadeUpNoX
+    animation: fadeUpNoX 0.5s

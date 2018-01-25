@@ -4,23 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Lobster|PT+Sans:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Lato|PT+Sans:700" rel="stylesheet">
     <style>
     @font-face {
-        font-family: 'KozGoPro Heavy';
-        src: url(/src/fonts/KozGoPro-Heavy.otf);
+        font-family: 'mplusblack';
+        src: url(/src/fonts/mplusblack.woff);
     }
     @font-face {
-        font-family: 'KozGoPro Reg';
-        src: url(/src/fonts/KozGoPro-Regular.otf);
-    }
-    @font-face {
-        font-family: 'KozGoPro Med';
-        src: url(/src/fonts/KozGoPro-Medium.otf);
-    }
-    @font-face {
-        font-family: 'KozGoPro Light';
-        src: url(/src/fonts/KozGoPro-Light.otf);
+        font-family: 'mpluslight';
+        src: url(/src/fonts/mpluslight.woff);
     }
     </style>
     <link rel="stylesheet" href="./materialize/css/materialize.min.css">
@@ -35,9 +27,10 @@
     </div>
 
     <div class="large-title">少女終末旅行</div>
-    <div class="shousai-button">詳細を見る</div>
+    <button class="shousai-button">詳細を見る</button>
+    <button class="long-scroll"><i class="fa fa-arrow-down"></i></button>
 
-    <div class="info-wrapper invisible">
+    <div class="info-wrapper invisible" anim="fadeUp">
         <a class="image-container" href="https://myanimelist.net/anime/35838/" target="_blank">
             <div class="anime-image"></div>
             <div class="view-on-mal">View on MyAnimeList</div>
@@ -68,7 +61,7 @@
         </div>
     </div>
 
-    <div class="cds-wrapper invisible">
+    <div class="cds-wrapper invisible" anim="fadeUpNoX">
         <div class="side-decor"></div>
         <a href="https://youtu.be/ZNOCm0PBYCQ" target="_blank" class="cd-wrapper">
             <div class="cd-image ugoku-ugoku">
@@ -115,11 +108,10 @@
         <div class="parallax"><div class="no-parallax-image quote-img" id="quote-parallax-img4"></div>
         </div>
         <div class="quote-text ssr">少女終末旅行</div>
-        <a href="#home-parallax-img" class="back-up"><i class="fa fa-arrow-up"></i></a>
+        <button class="back-up"><i class="fa fa-arrow-up"></i></button>
     </div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="./materialize/js/materialize.min.js"></script>
     <script src="./src/js/script.js"></script>
 </body>
 </html>

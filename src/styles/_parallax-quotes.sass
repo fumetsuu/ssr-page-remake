@@ -7,7 +7,7 @@
 #quote-parallax-img4
     background-image: url('../img/q4.jpg')
 .quote-text
-    font-family: 'KozGoPro Heavy'
+    font-family: 'mplusblack'
     font-size: 4rem
     letter-spacing: -2px
     padding: 0 20px
@@ -22,11 +22,14 @@
     right: 20px
     bottom: 20px
     background-color: white
-    text-align: center
-    line-height: 50px
     border-radius: 50%
     height: 50px
     width: 50px
+    border: none
+    transition: 0.4s
+    &:hover
+        background-color: darken($slightgrey, 10%)
+        cursor: pointer
     i
         background: -webkit-linear-gradient($blue, darken($blue, 30%));
         -webkit-background-clip: text;

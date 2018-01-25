@@ -95,14 +95,14 @@
   width: 80%;
   margin-left: 10%;
   font-size: 2.5rem;
-  font-family: 'KozGoPro Med';
+  font-family: 'PT Sans';
   letter-spacing: 1px;
 }
 
 .info-wrapper .info-container .synopsis-container .synopsis-text {
   padding: 50px 0;
   margin-top: 40px;
-  font-family: 'KozGoPro Light';
+  font-family: 'Lato';
   font-size: 0.8rem;
   width: 80%;
   margin-left: 10%;
@@ -248,13 +248,13 @@
     margin-left: 10%;
     margin-top: 20px;
     font-size: 2rem;
-    font-family: 'KozGoPro Med';
+    font-family: 'PT Sans';
     letter-spacing: 1px;
   }
   .info-wrapper .info-container .synopsis-container .synopsis-text {
     padding: 0 20px;
     margin-top: 10px;
-    font-family: 'KozGoPro Light';
+    font-family: 'Lato';
     font-size: 0.7rem;
     text-align: center;
     width: 80%;
@@ -381,11 +381,12 @@
   text-align: center;
   margin-top: 30%;
   line-height: 25px;
+  font-family: 'mpluslight', 'Lato';
 }
 
 .cds-wrapper .cd-wrapper .cd-text .cd-title {
   font-size: 2rem;
-  font-family: 'KozGoPro Heavy';
+  font-family: 'mplusblack', 'PT Sans';
 }
 
 .cds-wrapper .cd-wrapper:hover {
@@ -432,7 +433,7 @@
 }
 
 .quote-text {
-  font-family: 'KozGoPro Heavy';
+  font-family: 'mplusblack';
   font-size: 4rem;
   letter-spacing: -2px;
   padding: 0 20px;
@@ -451,11 +452,16 @@
   right: 20px;
   bottom: 20px;
   background-color: white;
-  text-align: center;
-  line-height: 50px;
   border-radius: 50%;
   height: 50px;
   width: 50px;
+  border: none;
+  transition: 0.4s;
+}
+
+.back-up:hover {
+  background-color: #d9e3ec;
+  cursor: pointer;
 }
 
 .back-up i {
@@ -533,7 +539,7 @@ body {
   font-size: 6rem;
   position: absolute;
   text-shadow: 1px 1px 20px black;
-  font-family: 'KozGoPro Heavy';
+  font-family: 'mplusblack';
   text-align: center;
   left: 50%;
   transform: translateX(-50%);
@@ -545,8 +551,8 @@ body {
   border-radius: 25px;
   color: #355f5b;
   border: none;
-  font-family: 'KozGoPro Reg';
-  padding: 14px 40px;
+  font-family: 'mpluslight';
+  padding: 15px 40px;
   left: 50%;
   bottom: 50%;
   transform: translateX(-50%);
@@ -558,6 +564,36 @@ body {
 .shousai-button:hover {
   cursor: pointer;
   background-color: #b3b3b3;
+}
+
+.long-scroll {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.long-scroll:hover {
+  background-color: #d9e3ec;
+  cursor: pointer;
+}
+
+.long-scroll i {
+  background: -webkit-linear-gradient(#85d3ff, #0096eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 @media (max-width: 1050px) {
@@ -601,6 +637,16 @@ body {
   }
 }
 
+@keyframes fadeUpNoX {
+  from {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media (max-width: 992px) {
   @keyframes fadeUp {
     from {
@@ -616,5 +662,9 @@ body {
 
 .fadeUp {
   animation: fadeUp 0.5s;
+}
+
+.fadeUpNoX {
+  animation: fadeUpNoX 0.5s;
 }
 /*# sourceMappingURL=main.css.map */

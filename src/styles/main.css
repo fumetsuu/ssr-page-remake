@@ -327,49 +327,169 @@
   height: 450px;
   width: 900px;
   background-color: white;
-  border-radius: 15px;
+  border-radius: 25px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 100%;
   position: relative;
   margin: 25px auto;
+  box-shadow: 1px 1px 25px 1px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
 .cds-wrapper .side-decor {
   position: absolute;
   width: 100px;
-  left: 0;
+  right: 0;
   top: 0;
   height: 100%;
-  background-color: orange;
-  z-index: -1;
+  background-color: #fbfcfd;
 }
 
-.cds-wrapper .ugoku-ugoku {
-  background-image: url("../img/ugoku.jpg");
-}
-
-.cds-wrapper .more-one-night {
-  background-image: url("../img/moreonenight.jpg");
-}
-
-.cds-wrapper .cd-image {
-  background-size: cover;
-  background-position: center;
+.cds-wrapper .cd-wrapper {
   width: 400px;
   height: 400px;
   margin: auto 0;
   justify-self: center;
+  position: relative;
 }
 
-.cds-wrapper .cd-image .cd-text {
+.cds-wrapper .cd-wrapper .ugoku-ugoku {
+  background-image: url("../img/ugoku.jpg");
+}
+
+.cds-wrapper .cd-wrapper .more-one-night {
+  background-image: url("../img/moreonenight.jpg");
+}
+
+.cds-wrapper .cd-wrapper .cd-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: 0.4s;
+  position: absolute;
+}
+
+.cds-wrapper .cd-wrapper .cd-text {
+  position: relative;
+  z-index: 1;
   opacity: 0;
   color: white;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+  transition: 0.4s;
+  text-align: center;
+  margin-top: 30%;
+  line-height: 25px;
 }
 
-.cds-wrapper .cd-image .cd-text .cd-title {
+.cds-wrapper .cd-wrapper .cd-text .cd-title {
   font-size: 2rem;
+  font-family: 'KozGoPro Heavy';
+}
+
+.cds-wrapper .cd-wrapper:hover {
+  cursor: pointer;
+}
+
+.cds-wrapper .cd-wrapper:hover > .cd-image {
+  filter: brightness(0.3);
+}
+
+.cds-wrapper .cd-wrapper:hover > .cd-text {
+  opacity: 1 !important;
+}
+
+@media (max-width: 992px) {
+  .cds-wrapper {
+    height: 900px;
+    width: 450px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+  }
+  .cds-wrapper .side-decor {
+    width: 100%;
+    bottom: 0;
+    height: 100px;
+  }
+}
+
+#quote-parallax-img1 {
+  background-image: url("../img/q1.jpg");
+}
+
+#quote-parallax-img2 {
+  background-image: url("../img/q2.jpg");
+}
+
+#quote-parallax-img3 {
+  background-image: url("../img/q3.jpg");
+}
+
+#quote-parallax-img4 {
+  background-image: url("../img/q4.jpg");
+}
+
+.quote-text {
+  font-family: 'KozGoPro Heavy';
+  font-size: 4rem;
+  letter-spacing: -2px;
+  padding: 0 20px;
+  text-align: center;
+  margin-top: 200px;
+  text-shadow: 1px 1px 10px black;
+}
+
+.ssr {
+  font-size: 6rem;
+}
+
+.back-up {
+  position: absolute;
+  z-index: 10;
+  right: 20px;
+  bottom: 20px;
+  background-color: white;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.back-up i {
+  background: -webkit-linear-gradient(#85d3ff, #0096eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 1350px) {
+  .quote-text {
+    font-size: 3rem;
+  }
+  .ssr {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .quote-text {
+    font-size: 2rem;
+  }
+  .ssr {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .ssr {
+    font-size: 3rem;
+    width: 3rem;
+    margin: 50px auto;
+    transform: translateX(-50%);
+    line-height: 120%;
+  }
 }
 
 html, body {
@@ -380,7 +500,7 @@ html, body {
 }
 
 body {
-  background-color: red;
+  background-color: #fbfcfd;
 }
 
 .home-parallax-container {
@@ -395,14 +515,17 @@ body {
   background-image: url("../img/bg1.jpg");
 }
 
-.parallax-image {
+.parallax-image, .no-parallax-image {
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   filter: brightness(0.7);
   z-index: -1;
+}
+
+.parallax-image {
+  background-attachment: fixed;
 }
 
 .large-title {
@@ -462,5 +585,36 @@ body {
 
 #forest-parallax-img {
   background-image: url("../img/bg2.jpg");
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 992px) {
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translate(-50%, 20%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+  }
+}
+
+.fadeUp {
+  animation: fadeUp 0.5s;
 }
 /*# sourceMappingURL=main.css.map */

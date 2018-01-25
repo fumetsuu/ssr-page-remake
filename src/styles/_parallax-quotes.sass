@@ -1,0 +1,50 @@
+#quote-parallax-img1
+    background-image: url('../img/q1.jpg')
+#quote-parallax-img2
+    background-image: url('../img/q2.jpg')
+#quote-parallax-img3
+    background-image: url('../img/q3.jpg')
+#quote-parallax-img4
+    background-image: url('../img/q4.jpg')
+.quote-text
+    font-family: 'KozGoPro Heavy'
+    font-size: 4rem
+    letter-spacing: -2px
+    padding: 0 20px
+    text-align: center
+    margin-top: 200px
+    text-shadow: 1px 1px 10px black
+.ssr
+    font-size: 6rem
+.back-up
+    position: absolute
+    z-index: 10
+    right: 20px
+    bottom: 20px
+    background-color: white
+    text-align: center
+    line-height: 50px
+    border-radius: 50%
+    height: 50px
+    width: 50px
+    i
+        background: -webkit-linear-gradient($blue, darken($blue, 30%));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+@media (max-width: 1350px)
+    .quote-text
+        font-size: 3rem
+    .ssr
+        font-size: 6rem
+@media (max-width: 1000px)
+    .quote-text
+        font-size: 2rem
+    .ssr
+        font-size: 5rem
+@media (max-width: 576px)
+    .ssr
+        font-size: 3rem
+        width: 3rem
+        margin: 50px auto
+        transform: translateX(-50%)
+        line-height: 120%

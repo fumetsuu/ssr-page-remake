@@ -2,34 +2,66 @@
     height: 450px
     width: 900px
     background-color: white
-    border-radius: 15px
+    border-radius: 25px
     display: grid
     grid-template-columns: 1fr 1fr
     grid-template-rows: 100%
     position: relative
     margin: 25px auto
+    box-shadow: 1px 1px 25px 1px rgba(0,0,0,0.2)
+    overflow: hidden
     .side-decor
         position: absolute
         width: 100px
-        left: 0
+        right: 0
         top: 0
         height: 100%
-        background-color: orange
-        z-index: -1
-    .ugoku-ugoku
-        background-image: url('../img/ugoku.jpg')
-    .more-one-night
-        background-image: url('../img/moreonenight.jpg')
-    .cd-image
-        background-size: cover
-        background-position: center
+        background-color: $slightgrey
+    .cd-wrapper
         width: 400px
         height: 400px
         margin: auto 0
         justify-self: center
+        position: relative
+        .ugoku-ugoku
+            background-image: url('../img/ugoku.jpg')
+        .more-one-night
+            background-image: url('../img/moreonenight.jpg')
+        .cd-image
+            width: 100%
+            height: 100%
+            background-size: cover
+            background-position: center
+            transition: 0.4s
+            position: absolute
         .cd-text
+            position: relative
+            z-index: 1
             opacity: 0
             color: white
-            font-size: 0.8rem
+            font-size: 0.7rem
+            transition: 0.4s
+            text-align: center
+            margin-top: 30%
+            line-height: 25px
             .cd-title
                 font-size: 2rem
+                font-family: 'KozGoPro Heavy'
+        &:hover
+            cursor: pointer
+            & > .cd-image
+                filter: brightness(0.3)
+            & > .cd-text
+                opacity: 1 !important
+
+@media (max-width: 992px)
+    .cds-wrapper
+        height: 900px
+        width: 450px
+        display: grid
+        grid-template-columns: 100%
+        grid-template-rows: 1fr 1fr
+        .side-decor
+            width: 100%
+            bottom: 0
+            height: 100px
